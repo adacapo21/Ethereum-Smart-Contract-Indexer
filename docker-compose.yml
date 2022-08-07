@@ -1,0 +1,29 @@
+# version of docker-compose
+version: '3.9'
+# 'services' are equivalent to 'containers'
+services:
+  test-redis:
+    # Use Docker Hub base image 'redis:alpine'
+    image: 'redis:alpine'
+    ports:
+      - "6379:6379"
+
+  socios-service:
+    restart: on-failure
+    build: ./src
+    volumes:
+      - .:/usr/src/sociosDemo
+      - /usr/src/app/node_modules
+    ports:
+      - '3000:3000'
+    command: yarn docker
+    env_file:
+      - .env.docker
+
+
+  nginx:
+    build: ./nginx
+    ports:
+      - '80:80'
+    depends_on:
+      - socios-service
