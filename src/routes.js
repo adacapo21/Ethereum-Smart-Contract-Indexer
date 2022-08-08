@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import axios from "axios";
 import transactionRoutes from "./routes/transactionRoutes.js";
 
 /**
@@ -18,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 /**
- * Api Task.
+ * Api for Transactions.
  */
 router.use('/transactions', transactionRoutes);
 
