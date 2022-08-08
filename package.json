@@ -8,7 +8,8 @@
     "start": "NODE_ENV=development & nodemon --experimental-json-modules src/index.js --trace-warnings",
     "docker": "NODE_ENV=docker nodemon --experimental-json-modules src/index.js --trace-warnings",
     "docker:debug": "NODE_ENV=docker nodemon --inspect --experimental-json-modules src/index.js --trace-warnings",
-    "test": "NODE_ENV=test jest --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache --config jest.config.cjs --testTimeout=10000"
+    "test": "NODE_ENV=test jest --experimental-modules",
+    "test:mocha": "mocha --experimental-modules"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.18.10",
@@ -19,6 +20,7 @@
     "babel-plugin-transform-import-meta": "^2.2.0",
     "body-parser": "^1.20.0",
     "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "connect-redis": "^6.1.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
@@ -30,7 +32,9 @@
     "jest": "^28.1.3",
     "jest-config": "^28.1.3",
     "lodash": "^4.17.21",
+    "mocha": "^10.0.0",
     "morgan": "^1.10.0",
+    "node-fetch": "2.6.6",
     "redis": "^4.2.0",
     "redis-mock": "^0.56.3",
     "should": "^13.2.3",

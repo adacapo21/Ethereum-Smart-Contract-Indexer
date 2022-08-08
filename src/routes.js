@@ -22,21 +22,5 @@ router.get('/', (req, res) => {
  */
 router.use('/transactions', transactionRoutes);
 
-// Define endpoint
-router.get(
-    "/jobs", async (req, res) => {
-        try {
-            const jobs = await axios.get(`http://api.plos.org/search?q=title:DNA`);
-            res.json({
-                jobs: jobs.data
-            })
-        } catch(err) {
-            res.status(500).send({
-                message: err.message
-            });
-        }
-    }
-);
-
 
 export default router;

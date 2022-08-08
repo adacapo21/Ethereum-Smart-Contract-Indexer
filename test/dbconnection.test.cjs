@@ -1,5 +1,4 @@
-const redis = require("redis-mock"),
-    client = redis.createClient();
+const redis = require("redis-mock");
 require('should');
 
 describe("Db Connection", function () {
