@@ -13,6 +13,9 @@ docker-compose -f ./docker-compose.yml up
 
 ## Run locally on your environment without docker
 
+``` 
+yarn install
+```
 You need to run the below command first
 ```
 redis-server
