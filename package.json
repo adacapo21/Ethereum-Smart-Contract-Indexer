@@ -9,7 +9,7 @@
     "start": "NODE_ENV=development & nodemon --experimental-json-modules src/index.js --trace-warnings",
     "docker": "NODE_ENV=docker nodemon --experimental-json-modules src/index.js --trace-warnings",
     "docker:debug": "NODE_ENV=docker nodemon --inspect --experimental-json-modules src/index.js --trace-warnings",
-    "test": "NODE_ENV=test jest --experimental-modules",
+    "test": "cross-env NODE_ENV=test jest",
     "test:mocha": "cross-env NODE_ENV=test mocha --require @babel/register test"
   },
   "dependencies": {

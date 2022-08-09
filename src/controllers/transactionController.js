@@ -15,7 +15,7 @@ export async function getTransactions(req, res, next) {
 
         res.status(HttpStatus.OK).json(transactions);
     } catch (error) {
-        next(error);
+        res.status(HttpStatus.INTERNAL_SERVER_ERROR).send(error.message);
     }
 }
 
@@ -33,7 +33,7 @@ export async function getAmountTransferred(req, res, next) {
 
         res.status(HttpStatus.OK).json(amount);
     } catch (error) {
-        next(error);
+        res.status(HttpStatus.INTERNAL_SERVER_ERROR).send(error.message);
     }
 }
 
@@ -50,6 +50,6 @@ export async function getTransactionByHash(req, res, next) {
 
         res.status(HttpStatus.OK).json(transaction);
     } catch (error) {
-        next(error);
+        res.status(HttpStatus.INTERNAL_SERVER_ERROR).send(error.message);
     }
 }

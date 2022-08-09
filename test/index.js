@@ -11,7 +11,7 @@ import router from "../src/routes.js";
 
 const app = express();
 
-const APP_PORT = process.env.APP_PORT || '3000';
+const APP_PORT = process.env.APP_PORT || '5000';
 const APP_HOST = process.env.APP_HOST || '0.0.0.0';
 const REDIS_PORT= process.env.REDIS_PORT;
 const REDIS_URL= process.env.REDIS_URL;

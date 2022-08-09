@@ -40,4 +40,10 @@ http://localhost:3000/api/transactions/search/:txHash
 
 **In order to make the project run, you need to run your INFURA KEY, on the environment variables.**
 
+
+### Run tests 
+```
+yarn test
+```
+
 For more check **.env.example file**.
