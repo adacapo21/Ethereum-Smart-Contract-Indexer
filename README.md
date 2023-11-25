@@ -1,4 +1,4 @@
-## Build & Run Socios Backend - Docker
+## Ethereum Smart Contract Transactions Indexer
 
 Docker runs two images, one for redis one for Socios app respectively.
 ```
